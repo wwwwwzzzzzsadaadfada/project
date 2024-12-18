@@ -52,6 +52,12 @@ const routes = [
         name: 'StudentInfo',
         component: () => import('@/views/student/info.vue'),
         meta: { title: '基本信息管理' }
+      },
+      {
+        path: 'assistance',
+        name: 'StudentAssistance',
+        component: () => import('@/views/student/assistance.vue'),
+        meta: { title: '受助信息管理' }
       }
     ]
   }

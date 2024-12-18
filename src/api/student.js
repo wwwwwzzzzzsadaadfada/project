@@ -59,4 +59,58 @@ export function exportStudentData(params) {
     params,
     responseType: 'blob'
   })
+}
+
+// 获取受助信息列表
+export function getAssistanceList(params) {
+  return request({
+    url: '/api/student/assistance/list',
+    method: 'get',
+    params
+  })
+}
+
+// 添加受助信息
+export function addAssistance(data) {
+  return request({
+    url: '/api/student/assistance',
+    method: 'post',
+    data
+  })
+}
+
+// 更新受助信息
+export function updateAssistance(id, data) {
+  return request({
+    url: `/api/student/assistance/${id}`,
+    method: 'put',
+    data
+  })
+}
+
+// 删除受助信息
+export function deleteAssistance(ids) {
+  return request({
+    url: '/api/student/assistance',
+    method: 'delete',
+    data: { ids: Array.isArray(ids) ? ids : [ids] }
+  })
+}
+
+// 导出受助信息
+export function exportAssistance(params) {
+  return request({
+    url: '/api/student/assistance/export',
+    method: 'get',
+    params,
+    responseType: 'blob'
+  })
+}
+
+// 同步在校学生信息到受助信息
+export function syncStudentAssistance() {
+  return request({
+    url: '/api/student/assistance/sync',
+    method: 'post'
+  })
 } 

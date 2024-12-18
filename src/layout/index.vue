@@ -44,6 +44,10 @@
             <el-icon><Document /></el-icon>
             <template #title>基本信息管理</template>
           </el-menu-item>
+          <el-menu-item index="/student/assistance">
+            <el-icon><Money /></el-icon>
+            <template #title>受助信息管理</template>
+          </el-menu-item>
         </el-sub-menu>
       </el-menu>
     </div>
@@ -100,7 +104,8 @@ import {
   Document,
   Fold,
   Expand,
-  CaretBottom
+  CaretBottom,
+  Money
 } from '@element-plus/icons-vue'
 
 const router = useRouter()
